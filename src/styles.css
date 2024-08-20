@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Encode Sans Expanded", sans-serif !important;
+}
+
+a {
+  color: inherit;
+}
+
+.nav-link {
+  transition: unset !important;
+}
+
+.common, .btn-main, .bg-main, .active-link {
+  background-color: #0aad0a !important;
+}
+
+.active-link {
+  color: #f0f3f2 !important;
+  border-radius: 5px;
+  background-color: #0aad0a  !important;
+}
+
+.rating-color {
+  color: #ffc908;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.product {
+  border-radius: 5px;
+  border: solid 1px #0aad0a;
+  transition: box-shadow 0.5s;
+  overflow: hidden;
+}
+
+.product:hover {
+  box-shadow: 0 0 10px rgba(17, 189, 17, 0.4078431373);
+}
+
+.font-sm {
+  font-size: 12px;
+}
+
+.text-main {
+  color: #0aad0a;
+}
+
+.bg-main-light {
+  background-color: #f0f3f2 !important;
+}
+
+.btn-main {
+  padding: 7px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.btn-main:disabled {
+  cursor: not-allowed;
+  background-color: #ccc !important;
+}
+
+.btn-main:disabled:hover {
+  background-color: #ccc !important;
+}
+
+.btn-main:hover {
+  background-color: #11bd11 !important;
+}
