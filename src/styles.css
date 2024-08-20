@@ -12,14 +12,17 @@ a {
   transition: unset !important;
 }
 
-.common, .btn-main, .bg-main, .active-link {
+.common,
+.btn-main,
+.bg-main,
+.active-link {
   background-color: #0aad0a !important;
 }
 
 .active-link {
   color: #f0f3f2 !important;
   border-radius: 5px;
-  background-color: #0aad0a  !important;
+  background-color: #0aad0a !important;
 }
 
 .rating-color {
@@ -79,4 +82,5 @@ a:hover {
 
 .btn-main:hover {
   background-color: #11bd11 !important;
+  color: #fff;
 }
