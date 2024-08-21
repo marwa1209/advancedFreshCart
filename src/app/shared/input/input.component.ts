@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [ReactiveFormsModule, NgIf],
+  imports: [ReactiveFormsModule,NgIf],
   templateUrl: './input.component.html',
 })
 export class InputComponent {

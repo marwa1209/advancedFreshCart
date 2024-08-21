@@ -66,7 +66,7 @@ export class RegisterComponent {
         },
       });
     } else {
-      this.isValid = false;
+    this.isValid = false;
       this.message = `the form is invalid`;
     }
   }
