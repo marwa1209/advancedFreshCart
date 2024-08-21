@@ -1,1 +1,45 @@
-<p>login works!</p>
+<section class="my-3 w-75 mx-auto">
+  <h1 class="my-4">Login Now</h1>
+  <div class="rounded shadow p-4 bg-main-light">
+    <div
+      class="text-success text-center"
+      [ngClass]="{ 'text-danger': !isValid }"
+    >
+      {{ message }}
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+      <!-- Email -->
+      <app-input
+        label="Email"
+        [control]="loginForm.get('email')!"
+        id="email"
+        type="email"
+        [errorMessages]="{
+          required: 'Email is required.',
+          email: 'Enter a valid email address.'
+        }"
+      ></app-input>
+
+      <!-- Password -->
+      <app-input
+        label="Password"
+        [control]="loginForm.get('password')!"
+        id="password"
+        type="password"
+        [errorMessages]="{
+          required: 'Password is required.',
+          pattern:
+            'Password must be at least 6 characters long and c an include letters, numbers, and symbols.'
+        }"
+      ></app-input>
+
+      <!-- Submit button -->
+      <button [disabled]="loginForm.invalid" type="submit" class="btn btn-main">
+        Login @if(isLoading){<span
+          ><i class="fa fa-spin fa-spinner"></i></span
+        >}
+      </button>
+    </form>
+  </div>
+</section>

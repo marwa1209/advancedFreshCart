@@ -1,21 +1,21 @@
+import { NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { AuthService } from './../../core/services/auth.service';
 import {
   FormBuilder,
-  FormControl,
   FormControlOptions,
   FormGroup,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { confirmPassword } from '../../shared/validators/validators';
-import { NgClass } from '@angular/common';
 import { Router } from '@angular/router';
+import { InputComponent } from '../../shared/input/input.component';
+import { confirmPassword } from '../../shared/validators/validators';
+import { AuthService } from './../../core/services/auth.service';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule, NgClass],
+  imports: [ReactiveFormsModule, NgClass, InputComponent],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
 })
@@ -58,7 +58,6 @@ export class RegisterComponent {
             this.message = 'User registered successfully';
             this._Router.navigate(['/login']);
           }
-          console.log(response);
         },
         error: (error) => {
           this.message = error.error.message;
@@ -67,8 +66,8 @@ export class RegisterComponent {
         },
       });
     } else {
-      console.log('Form is invalid');
+    this.isValid = false;
+      this.message = `the form is invalid`;
     }
   }
-  
 }
