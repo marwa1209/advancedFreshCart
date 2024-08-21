@@ -11,13 +11,16 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './not-found.component.css',
 })
 export class NotFoundComponent implements OnInit {
-
+  isLoggedIn: boolean = false;
   ngOnInit(): void {
     this.checkLoginStatus();
   }
-  isLoggedIn: boolean = true;
   checkLoginStatus(): void {
-
-
-  }
+    if (typeof window !== 'undefined' && window.localStorage) {
+    if (localStorage.getItem('etoken') != null) {
+      this.isLoggedIn = true;
+    } else {
+      this.isLoggedIn = false;
+    }
+  }}
 }

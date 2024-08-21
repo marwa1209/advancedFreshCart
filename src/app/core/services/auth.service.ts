@@ -17,22 +17,27 @@ export class AuthService {
     const endpoint = 'auth/signup';
     return this._MainService.postRequest(endpoint, userData);
   }
+
   // Method to handle user signin
   signin(userData: object) {
     const endpoint = 'auth/signin';
     return this._MainService.postRequest(endpoint, userData);
   }
+
   // Method to handle user signout
   signout() {
     localStorage.removeItem('etoken');
     this.userInfo = null;
     this._Router.navigate(['/login']);
   }
+  
   decodeUser(): void {
+    if (typeof window !== 'undefined' && window.localStorage) {
     const token = localStorage.getItem('etoken');
     if (token != null) {
       const decode = jwtDecode<UserInfo>(token);
       this.userInfo = decode;
     }
   }
+}
 }

@@ -1,8 +1,11 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './core/guards/auth.guard';
+import { authGuard1 } from './core/guards/auth-1.guard';
 
 export const routes: Routes = [
   {
     path: '',
+    canActivate: [authGuard],
     loadComponent: () =>
       import('./layouts/blank-layout/blank-layout.component').then(
         (m) => m.BlankLayoutComponent
@@ -77,6 +80,7 @@ export const routes: Routes = [
   },
   {
     path: '',
+    canActivate: [authGuard1],
     loadComponent: () =>
       import('./layouts/auth-layout/auth-layout.component').then(
         (m) => m.AuthLayoutComponent

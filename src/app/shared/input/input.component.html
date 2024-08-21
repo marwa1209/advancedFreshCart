@@ -1,7 +1,11 @@
 <div class="mb-3">
   <label [for]="id" class="form-label">{{ label }}</label>
   <input [formControl]="control" [type]="type" [id]="id" class="form-control" />
-  <div *ngIf="hasError" class="text-danger">
-    <div *ngIf="errorMessage">{{ errorMessage }}</div>
-  </div>
+  @if (hasError) {
+    <div class="text-danger">
+      @if (errorMessage) {
+        <div>{{ errorMessage }}</div>
+      }
+    </div>
+  }
 </div>

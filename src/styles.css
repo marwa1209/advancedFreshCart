@@ -44,6 +44,7 @@ a:hover {
   border: solid 1px #0aad0a;
   transition: box-shadow 0.5s;
   overflow: hidden;
+  padding:4px;
 }
 
 .product:hover {
@@ -83,4 +84,57 @@ a:hover {
 .btn-main:hover {
   background-color: #11bd11 !important;
   color: #fff;
+}
+.skeleton-card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.border-gray-light {
+  border-color: #d1d5db;
+}
+.bg-gray-light{
+  background-color: #d1d5db;
+}
+.max-w-400px {
+  max-width: 400px;
+}
+.h-72 {
+  height: 18rem; /* 288px */
+}
+
+.h-3 {
+  height: 0.75rem; /* 12px */
+}
+
+.h-4 {
+  height: 1rem; /* 16px */
+}
+
+.h-8 {
+  height: 2rem; /* 32px */
+}
+.w-2{
+  width: 33.333333%;
+}
+
+.w-5 {
+  width: 83.333333%;
+}
+
+.w-4 {
+  width: 66.666667%;
 }
