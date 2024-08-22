@@ -17,7 +17,7 @@
   </div>
   <div class="row g-4">
     @for (item of Items; track item.id) {
-    <div class="col-lg-2 col-md-4 col-sm-6">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
       <div class="product">
         <div [routerLink]="['/details', item._id]" class="cursor-pointer">
           <img
@@ -45,9 +45,8 @@
         />
       </div>
     </div>
-
     } @empty { @for (item of [0,1,2,3,4,5,6,7,8,9,10,11]; track item) {
-    <div class="col-lg-2 col-md-4 col-sm-6">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
       <app-skeleton />
     </div>
     } }
