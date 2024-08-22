@@ -38,21 +38,17 @@
             </div>
           </div>
         </div>
-        <button class="btn-main w-100 my-2" (click)="AddToCart(item._id)">
-          Add Product
-        </button>
+        <app-button
+          class="my-2"
+          (click)="AddToCart(item._id)"
+          btnName="Add Product"
+        />
       </div>
     </div>
-    } @empty {
-      @for (item of [0,1,2,3,4,5]; track item) {
-    <div
-      class="d-flex flex-column gap-3 bg-white border border-gray-light max-w-[400px] p-2"
-    >
-      <div class="bg-gray-light h-72"></div>
-      <div class="bg-gray-light h-3 w-2"></div>
-      <div class="bg-gray-light h-4 w-5"></div>
-      <div class="bg-gray-light h-4 w-4"></div>
-      <div class="bg-gray-light h-8"></div>
+
+    } @empty { @for (item of [0,1,2,3,4,5,6,7,8,9,10,11]; track item) {
+    <div class="col-lg-2 col-md-4 col-sm-6">
+      <app-skeleton />
     </div>
     } }
   </div>

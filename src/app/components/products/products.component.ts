@@ -1,12 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ProductService } from '../../core/services/product.service';
 import { Product } from '../../core/interfaces/product';
-import { ItemsSectionComponent } from '../../shared/items-section/items-section.component';
+import {  ProductsSectionComponent } from '../../shared/items-section/products-section.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [ItemsSectionComponent],
+  imports: [ProductsSectionComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
 })
@@ -27,7 +27,5 @@ export class ProductsComponent implements OnInit {
       },
     });
   }
-  AddToCart(id:string){
-
-  }
+  AddToCart(id: string) {}
 }
